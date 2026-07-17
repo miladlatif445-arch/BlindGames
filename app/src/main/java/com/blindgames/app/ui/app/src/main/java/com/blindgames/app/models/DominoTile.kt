@@ -1,13 +1,9 @@
 package com.blindgames.app.models
 
 data class DominoTile(
-
     val left: Int,
-
     val right: Int,
-
     var played: Boolean = false
-
 ) {
 
     fun total(): Int {
