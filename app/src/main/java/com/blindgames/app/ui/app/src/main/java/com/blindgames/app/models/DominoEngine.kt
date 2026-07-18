@@ -26,7 +26,9 @@ class DominoEngine {
 
         val shuffled = tiles.shuffled()
 
-        players.forEach { it.clearTiles() }
+        players.forEach {
+            it.clearTiles()
+        }
 
         var index = 0
 
@@ -34,5 +36,13 @@ class DominoEngine {
             players[index % players.size].addTile(shuffled[index])
             index++
         }
+    }
+
+    fun shuffleTiles() {
+        tiles.shuffle()
+    }
+
+    fun remainingTiles(): Int {
+        return tiles.size
     }
 }
